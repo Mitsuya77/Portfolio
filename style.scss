@@ -1,4 +1,5 @@
 @import 'config';
+@import 'competence';
 
 * {
     box-sizing: border-box;
@@ -66,7 +67,6 @@
         }
       }
     }
-  
     &#home {
       overflow: hidden;
       h1 {
@@ -94,7 +94,7 @@
     @include easeOut;
   }
 
-  // Rotate Into X With Menu Lines
+  // Rotate menu buger
   &.close {
     transform: rotate(180deg);
 
@@ -104,7 +104,7 @@
         transform: rotate(45deg) translate(5px, 5px);
       }
 
-      // Line 2 - Hide
+      // Line 2 - disparait
       &:nth-child(2) {
         opacity: 0;
       }
@@ -202,12 +202,64 @@
   }
 }
 
-
-
-  #main-footer {
+// responsive
+@include mediaMd {
+  main {
+    align-items: center;
     text-align: center;
-    padding: 1rem;
-    background: darken($primary-color, 10);
-    color: set-text-color($primary-color);
-    height: 60px;
+
+    .nom-prenom {
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
   }
+
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0;
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px;
+  }
+
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0);
+
+    .portrait {
+      background: url('../portfolio/img/moi_responsive.jpg');
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+}
+
+@include mediaSm {
+  main {
+    padding: 2rem;
+    #home h1 {
+      margin-top: 10vh;
+    }
+
+    .nom-prenom {
+      margin-top:1rem;
+      font-size: 5rem;
+    }
+  }
+
+}
+
+
+
+
+
