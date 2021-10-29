@@ -1,5 +1,6 @@
+@charset "UTF-8";
 footer {
-  background-color: #444;
+  background-color: #1b1b1b;
   height: 50px;
   width: 100%;
   position: relative;
@@ -101,13 +102,74 @@ h4 {
     grid-row: unset !important;
   }
 }
+.projet_slayer {
+  padding: 16px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.projet_slayer img {
+  width: 100%;
+  cursor: pointer;
+}
+
+#lightbox {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+#lightbox.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  padding: 8px;
+  background-color: black;
+  border: 2px solid #0856e7;
+}
+
+p {
+  color: white;
+  margin-left: 50px;
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+
+li li {
+  list-style: none;
+  color: white;
+  margin-left: 120px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+li li::before {
+  content: "•";
+  color: #0856e7;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  background: #444;
-  color: set-text-color(#444);
+  background: #1b1b1b;
+  color: set-text-color(#1b1b1b);
   height: 100%;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -126,7 +188,7 @@ body#bg-img:after {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: rgba(68, 68, 68, 0.6);
+  background: rgba(27, 27, 27, 0.6);
 }
 
 h1,
@@ -147,7 +209,7 @@ h3.description {
   color: white;
   margin-bottom: 2rem;
   padding: 0.2rem 1rem;
-  background: rgba(73, 73, 73, 0.5);
+  background: rgba(32, 32, 32, 0.5);
 }
 
 a {
@@ -237,7 +299,7 @@ main#home h1 {
 .menu-nav {
   margin: 0;
   padding: 0;
-  background: #373737;
+  background: #0e0e0e;
   list-style: none;
   transform: translate3d(0, -100%, 0);
   transition: all 0.5s ease-out;
@@ -246,7 +308,7 @@ main#home h1 {
   transform: translate3d(0, 0, 0);
 }
 .menu-branding {
-  background: #444;
+  background: #1b1b1b;
   transform: translate3d(0, 100%, 0);
   transition: all 0.5s ease-out;
 }
@@ -274,7 +336,7 @@ main#home h1 {
   text-transform: uppercase;
   padding: 2rem 0;
   font-weight: 300;
-  color: set-text-color(#444);
+  color: set-text-color(#1b1b1b);
   text-decoration: none;
   transition: all 0.5s ease-out;
 }
