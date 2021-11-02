@@ -34,6 +34,7 @@ $background-opacity: 0.6;
       @content;
     }
   }
+
   
   @mixin mediaMd {
     @media screen and (max-width: 768px) {
