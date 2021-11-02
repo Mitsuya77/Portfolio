@@ -7,7 +7,7 @@ footer{
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    opacity: 0.8;
+    
   }
   
   .footerTexte{
@@ -15,5 +15,5 @@ footer{
     display: flex;
     height: 5vh;
     margin: auto;
-    color: white;
+    color: $secondary-color;
   }
